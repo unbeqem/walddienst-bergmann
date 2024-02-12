@@ -21,7 +21,7 @@ function Home() {
       <header>
         <main >
           <div className=' flex items-center w-full'>
-            <div className='lg:border-r-4 border-[#99B500] mt-6 mb-6 w-[55%] mr-2 sm:mr-0'>
+            <div className='lg:border-r-4 border-[#99B500] max-width-[640px]-mt-6 max-width-[640px]-mb-6 w-[55%] mr-2 sm:mr-0'>
               <img src={greenTrees} alt="" />
             </div>
             <div className='m-auto p-4 sm:p-10 sm:items-center w-[50%] text-center'>
