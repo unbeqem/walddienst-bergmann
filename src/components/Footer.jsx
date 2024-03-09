@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/logo.jpg'
+import logo from '../assets/walddienst-bergmann-logo.jpg'
 
 function Footer() {
   return (
@@ -25,7 +25,7 @@ function Footer() {
                 </div>
               </div>
               <div className='text-white flex m-auto justify-center items-center text-center mb-6'>
-               <p className='mr-20 text-lg'>Impressum</p> 
+              <a href="impressum"> <p className='mr-20 text-lg'>Impressum</p> </a>
                <p className='mr-20 text-lg'>Copyright 2024</p>
                <p className='text-lg'>Made by Tristan Keick</p>
               </div>

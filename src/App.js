@@ -3,6 +3,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Services from './components/Services';
 import Contact from './components/Contact';
+import Impressum from './components/Impressum';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
    <Route path='über' element={<About />} />
    <Route path='leistungen' element={<Services />} />
    <Route path='kontakt' element={<Contact />} />
+   <Route path='impressum' element={<Impressum />} />
    
    </Routes>
    

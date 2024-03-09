@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Modal from "@mui/material/Modal";
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import CloseIcon from '@mui/icons-material/Close'; 
-import logo from '../assets/logo.jpg'
+import logo from '../assets/walddienst-bergmann-logo.jpg'
 
 
 
