@@ -1,6 +1,6 @@
 import React from 'react'
 import greenTrees from '../assets/green-trees.jpg'
-import Falk from '../assets/walking-worker.jpg'
+import Falk from '../assets/Falk-im-wald.jpg'
 import cutTree from '../assets/cut-tree.jpg'
 import sawdust from '../assets/sawdust.jpg'
 import cut from '../assets/cut-tree-close.jpg'
