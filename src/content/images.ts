@@ -1,7 +1,7 @@
-import gefahrenbaumfaellung from "@/assets/originals/cut-tree-close.jpg";
-import gruenpflege from "@/assets/originals/vegetationspflege.jpg";
-import mondphasenholz from "@/assets/originals/cut-tree.jpg";
-import holzernte from "@/assets/originals/sawdust.jpg";
+import gefahrenbaumfaellung from "@/assets/images/gefahrenbaumfaellung.jpg";
+import gruenpflege from "@/assets/images/gruenpflege.jpg";
+import mondphasenholz from "@/assets/images/mondphasenholz.jpg";
+import holzernte from "@/assets/images/holzernte.jpg";
 import type { StaticImageData } from "next/image";
 
 export const serviceImages: Partial<Record<string, StaticImageData>> = {
@@ -11,8 +11,8 @@ export const serviceImages: Partial<Record<string, StaticImageData>> = {
   holzernte,
 };
 
-export { default as heroImage } from "@/assets/originals/green-trees.jpg";
-export { default as founderImage } from "@/assets/originals/Falk-im-wald.jpg";
-export { default as founderPortrait } from "@/assets/originals/falk.jpg";
-export { default as closingImage } from "@/assets/originals/colorfull-trees.jpg";
-export { default as logoImage } from "@/assets/originals/Logo_Final_klein.jpg";
+export { default as heroImage } from "@/assets/images/hero.jpg";
+export { default as founderImage } from "@/assets/images/founder-teaser.jpg";
+export { default as founderPortrait } from "@/assets/images/founder-portrait.jpg";
+export { default as closingImage } from "@/assets/images/closing-cta.jpg";
+export { default as logoImage } from "@/assets/images/logo.jpg";
