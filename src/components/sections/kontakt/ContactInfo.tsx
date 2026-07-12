@@ -4,7 +4,7 @@ import { siteConfig } from "@/content/site";
 export function ContactInfo() {
   return (
     <div className="flex flex-col gap-6 text-linen-50">
-      <h3 className="font-display text-2xl">Lasst uns gemeinsam wirken</h3>
+      <h3 className="font-display text-2xl">Lassen Sie uns gemeinsam was bewegen</h3>
 
       <div className="flex items-start gap-3">
         <MapPin size={22} className="mt-0.5 shrink-0 text-timber-300" />

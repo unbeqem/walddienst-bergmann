@@ -11,11 +11,9 @@ export function Footer() {
     <footer className="bg-forest-950 text-linen-50">
       <Container className="grid gap-12 py-16 sm:grid-cols-3">
         <div className="text-center sm:text-left">
-          <Image
-            src={logoImage}
-            alt="Walddienst Bergmann"
-            className="mx-auto h-20 w-20 rounded-full object-cover sm:mx-0"
-          />
+          <div className="mx-auto inline-block rounded-xl bg-linen-50 px-4 py-3 sm:mx-0">
+            <Image src={logoImage} alt="Walddienst Bergmann" className="h-10 w-auto" />
+          </div>
           <p className="mt-4 font-display text-lg">{siteConfig.tagline}</p>
         </div>
 
@@ -52,6 +50,9 @@ export function Footer() {
         <Container className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-8">
           <Link href="/impressum" className="hover:text-linen-50">
             Impressum
+          </Link>
+          <Link href="/datenschutz" className="hover:text-linen-50">
+            Datenschutz
           </Link>
           <span>Copyright {new Date().getFullYear()}</span>
           <span>Made by Tristan Keick</span>

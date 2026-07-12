@@ -15,4 +15,7 @@ export { default as heroImage } from "@/assets/images/hero.jpg";
 export { default as founderImage } from "@/assets/images/founder-teaser.jpg";
 export { default as founderPortrait } from "@/assets/images/founder-portrait.jpg";
 export { default as closingImage } from "@/assets/images/closing-cta.jpg";
-export { default as logoImage } from "@/assets/images/logo.jpg";
+export { default as logoImage } from "@/assets/images/logo-walddienst-web.jpg";
+export { default as leistungenHeroImage } from "@/assets/images/leistungen-hero.jpg";
+export { default as kontaktBgImage } from "@/assets/images/kontakt-bg.jpg";
+export { default as karriereBgImage } from "@/assets/images/karriere-bg.jpg";

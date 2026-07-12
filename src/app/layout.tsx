@@ -3,6 +3,8 @@ import { Fraunces, Inter } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { MotionProvider } from "@/components/layout/MotionProvider";
+import { CookieNotice } from "@/components/layout/CookieNotice";
+import { LocalBusinessSchema } from "@/components/layout/LocalBusinessSchema";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -45,11 +47,13 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${fraunces.variable} ${inter.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="flex min-h-full flex-col font-sans">
+      <body className="flex min-h-full flex-col overflow-x-hidden font-sans">
+        <LocalBusinessSchema />
         <MotionProvider>
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
+          <CookieNotice />
         </MotionProvider>
       </body>
     </html>

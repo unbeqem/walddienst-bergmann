@@ -2,67 +2,72 @@
 
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
-import { heroImage } from "@/content/images";
+import { founderPortrait } from "@/content/images";
 import { Button } from "@/components/ui/Button";
+import { Container } from "@/components/ui/Container";
 
 const container: Variants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.15, delayChildren: 0.2 } },
+  visible: { transition: { staggerChildren: 0.15, delayChildren: 0.15 } },
 };
 
 const item: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
 };
 
 export function Hero() {
   return (
-    <section className="relative flex h-[92vh] min-h-[560px] w-full items-center justify-center overflow-hidden">
-      <motion.div
-        className="absolute inset-0"
-        initial={{ scale: 1.12 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
-      >
-        <Image
-          src={heroImage}
-          alt="Wald im Morgenlicht"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-forest-950/70 via-forest-950/40 to-forest-950/80" />
-      </motion.div>
-
-      <motion.div
-        className="relative z-10 mx-auto flex max-w-3xl flex-col items-center gap-8 px-6 text-center text-linen-50"
-        variants={container}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.p
-          variants={item}
-          className="text-xs uppercase tracking-[0.35em] text-timber-300"
+    <section className="bg-linen-50 pb-16 pt-10 sm:pt-16">
+      <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
+        <motion.div
+          className="order-2 md:order-1"
+          variants={container}
+          initial="hidden"
+          animate="visible"
         >
-          Walddienst Bergmann
-        </motion.p>
-        <motion.h1
-          variants={item}
-          className="font-display text-3xl leading-snug sm:text-5xl sm:leading-tight"
-        >
-          „Lerne Charakter von den Bäumen, Werte von den Wurzeln und Wandel
-          von den Blättern“
-        </motion.h1>
-        <motion.p variants={item} className="text-sm tracking-wide text-linen-100/80">
-          — Tasneem Hameed
-        </motion.p>
-        <motion.div variants={item}>
-          <Button href="#unternehmer" variant="ghost">
-            Erfahren Sie mehr
-          </Button>
+          <motion.p
+            variants={item}
+            className="text-sm font-medium uppercase tracking-[0.25em] text-timber-700"
+          >
+            Walddienst Bergmann
+          </motion.p>
+          <motion.h1
+            variants={item}
+            className="mt-4 font-display text-3xl leading-snug text-forest-800 sm:text-5xl sm:leading-tight"
+          >
+            Ihr Forstwirt aus Neukirch
+          </motion.h1>
+          <motion.p variants={item} className="mt-6 max-w-md text-lg leading-relaxed text-ink-900/85">
+            Fachgerechte Baumpflege, sichere Fällungen und moderne Technik –
+            für einen Wald, der auch morgen noch trägt.
+          </motion.p>
+          <motion.div variants={item} className="mt-8 flex flex-wrap gap-4">
+            <Button href="/leistungen">Leistungen entdecken</Button>
+            <Button href="/kontakt" variant="secondary">
+              Kontakt aufnehmen
+            </Button>
+          </motion.div>
         </motion.div>
-      </motion.div>
+
+        <motion.div
+          className="order-1 md:order-2"
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl shadow-xl">
+            <Image
+              src={founderPortrait}
+              alt="Falk Bergmann"
+              fill
+              priority
+              sizes="(min-width: 768px) 384px, 80vw"
+              className="object-cover"
+            />
+          </div>
+        </motion.div>
+      </Container>
     </section>
   );
 }

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/ui/Section";
+import { PhotoSection } from "@/components/ui/PhotoSection";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { services } from "@/content/services";
+import { leistungenHeroImage } from "@/content/images";
 import { ServiceDetail } from "@/components/sections/leistungen/ServiceDetail";
 
 export const metadata: Metadata = {
@@ -14,7 +16,12 @@ export const metadata: Metadata = {
 export default function LeistungenPage() {
   return (
     <>
-      <Section tone="forest" className="pt-24 pb-16 text-center">
+      <PhotoSection
+        image={leistungenHeroImage}
+        alt="Wald"
+        overlay="bg-forest-950/65"
+        className="pt-24 pb-16 text-center text-linen-50"
+      >
         <Reveal>
           <p className="text-sm font-medium uppercase tracking-[0.25em] text-timber-300">
             Was wir tun
@@ -25,7 +32,7 @@ export default function LeistungenPage() {
             Sie haben – wir setzen Ihre Wünsche qualifiziert um.
           </p>
         </Reveal>
-      </Section>
+      </PhotoSection>
 
       {services.map((service, i) => (
         <ServiceDetail

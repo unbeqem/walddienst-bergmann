@@ -24,3 +24,24 @@ export async function sendContactMessage(payload: ContactPayload) {
   ensureInit();
   return emailjs.send(SERVICE_ID, TEMPLATE_ID, payload);
 }
+
+export type ApplicationPayload = {
+  name: string;
+  recipient: string;
+  phone: string;
+  position: string;
+  message: string;
+};
+
+export async function sendApplicationMessage(payload: ApplicationPayload) {
+  ensureInit();
+  // Reuses the existing contact template (no separate application template
+  // configured in EmailJS yet) - the position is prefixed into the message
+  // body so it's clearly identifiable as a Kurzbewerbung on arrival.
+  return emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+    name: payload.name,
+    recipient: payload.recipient,
+    phone: payload.phone,
+    message: `[Kurzbewerbung – ${payload.position}]\n\n${payload.message}`,
+  });
+}

@@ -32,16 +32,13 @@ export function Navbar() {
         )}
       >
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 sm:px-8">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center">
             <Image
               src={logoImage}
               alt="Walddienst Bergmann"
-              className="h-10 w-10 rounded-full object-cover"
+              className="h-10 w-auto"
               priority
             />
-            <span className="font-display text-lg tracking-wide text-forest-800">
-              Walddienst Bergmann
-            </span>
           </Link>
 
           <nav className="hidden items-center gap-8 sm:flex">

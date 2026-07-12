@@ -17,7 +17,9 @@ const jobs = [
   ["vegetationspflege.jpg", "gruenpflege.jpg", 1400],
   ["cut-tree.jpg", "mondphasenholz.jpg", 1400],
   ["sawdust.jpg", "holzernte.jpg", 1400],
-  ["Logo_Final_klein.jpg", "logo.jpg", 512],
+  ["green-trees-dark.jpg", "leistungen-hero.jpg", 2400],
+  ["rising-sun.jpg", "kontakt-bg.jpg", 2400],
+  ["working.jpg", "karriere-bg.jpg", 2400],
 ];
 
 if (!existsSync(OUT)) mkdirSync(OUT, { recursive: true });
