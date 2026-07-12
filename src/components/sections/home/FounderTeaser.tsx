@@ -8,7 +8,7 @@ export function FounderTeaser() {
     <Section id="unternehmer" tone="linen">
       <div className="grid items-center gap-12 md:grid-cols-2">
         <Reveal direction="right" className="order-2 md:order-1">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-timber-600">
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-timber-700">
             Der Unternehmer
           </p>
           <h2 className="mt-3 font-display text-3xl text-forest-800 sm:text-4xl">

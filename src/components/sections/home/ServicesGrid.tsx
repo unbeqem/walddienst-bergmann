@@ -8,7 +8,7 @@ export function ServicesGrid() {
   return (
     <Section id="leistungen" tone="linen-alt">
       <Reveal className="mx-auto max-w-2xl text-center">
-        <p className="text-sm font-medium uppercase tracking-[0.25em] text-timber-600">
+        <p className="text-sm font-medium uppercase tracking-[0.25em] text-timber-700">
           Was wir tun
         </p>
         <h2 className="mt-3 font-display text-3xl text-forest-800 sm:text-4xl">

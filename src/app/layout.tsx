@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { MotionProvider } from "@/components/layout/MotionProvider";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -18,9 +19,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Walddienst Bergmann",
+  title: {
+    default: "Walddienst Bergmann",
+    template: "%s",
+  },
   description:
     "Walddienst Bergmann – Forstwirtschaft, Baumpflege und Gefahrenbaumfällung aus Neukirch.",
+  openGraph: {
+    title: "Walddienst Bergmann",
+    description:
+      "Forstwirtschaft, Baumpflege und Gefahrenbaumfällung aus Neukirch – RAL-zertifiziert.",
+    locale: "de_DE",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -35,9 +46,11 @@ export default function RootLayout({
       className={`${fraunces.variable} ${inter.variable} h-full scroll-smooth antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <MotionProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </MotionProvider>
       </body>
     </html>
   );

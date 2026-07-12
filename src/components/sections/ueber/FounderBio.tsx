@@ -27,7 +27,7 @@ export function FounderBio() {
         </Reveal>
 
         <Reveal direction="left">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-timber-600">
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-timber-700">
             Der Gründer
           </p>
           <h2 className="mt-3 font-display text-3xl text-forest-800 sm:text-4xl">
