@@ -11,9 +11,11 @@ export function Footer() {
     <footer className="bg-forest-950 text-linen-50">
       <Container className="grid gap-12 py-16 sm:grid-cols-3">
         <div className="text-center sm:text-left">
-          <div className="mx-auto inline-block rounded-xl bg-linen-50 px-4 py-3 sm:mx-0">
-            <Image src={logoImage} alt="Walddienst Bergmann" className="h-10 w-auto" />
-          </div>
+          <Image
+            src={logoImage}
+            alt="Walddienst Bergmann"
+            className="mx-auto h-10 w-auto sm:mx-0"
+          />
           <p className="mt-4 font-display text-lg">{siteConfig.tagline}</p>
         </div>
 
