@@ -13,5 +13,6 @@ export const serviceImages: Partial<Record<string, StaticImageData>> = {
 
 export { default as heroImage } from "@/assets/originals/green-trees.jpg";
 export { default as founderImage } from "@/assets/originals/Falk-im-wald.jpg";
+export { default as founderPortrait } from "@/assets/originals/falk.jpg";
 export { default as closingImage } from "@/assets/originals/colorfull-trees.jpg";
 export { default as logoImage } from "@/assets/originals/Logo_Final_klein.jpg";
